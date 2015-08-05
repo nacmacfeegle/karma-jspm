@@ -1,4 +1,4 @@
-# karma-jspm  [![Build Status](https://travis-ci.org/Workiva/karma-jspm.svg?branch=master)](https://travis-ci.org/Workiva/karma-jspm)
+# karma-jspm  [![Build Status](https://travis-ci.org/nacmacfeegle/karma-jspm.svg?branch=master)](https://travis-ci.org/nacmacfeegle/karma-jspm)
 
 karma-jspm includes the jspm module loader for karma runs. This allows dynamic loading of src/test files and modules. No longer do you need to worry about browserifying your src or tests before every test run!
 
@@ -24,7 +24,7 @@ Karma auto loads plugins unless you specify a plugins config. If you have one, y
 plugins: ['karma-jspm', 'karma-phantomjs-launcher'],
 ```
 
-The `loadFiles` configuration tells karma-jspm which files should be dynamically loaded via systemjs *before* the tests run. Globs or regular file paths are acceptable. 
+The `loadFiles` configuration tells karma-jspm which files should be dynamically loaded via systemjs *before* the tests run. Globs or regular file paths are acceptable.
 
 
 **You should not include these in the regular karma files array.** karma-jspm takes care of this for you.
@@ -50,7 +50,7 @@ jspm: {
 }
 ```
 
-You may want to make additional files/a file pattern available for jspm to load, but not load it right away. Simply add that to `serveFiles`. 
+You may want to make additional files/a file pattern available for jspm to load, but not load it right away. Simply add that to `serveFiles`.
 One use case for this is to only put test specs in `loadFiles`, and jspm will only load the src files when and if the test files require them. Such a config would look like this:
 
 ```js
@@ -70,7 +70,7 @@ jspm: {
 
 Depending on your framework and project structure it might be necessary to override jspm paths for the testing scenario.
 In order to do so just add the `paths` property to the jspm config object in your karma-configuration file, along with the overrides:
- 
+
 ```js
 jspm: {
     paths: {
@@ -78,4 +78,4 @@ jspm: {
         ...
     }
 }
-``` 
+```
